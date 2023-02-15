@@ -9,12 +9,6 @@ import com.joana.burger.models.Burger;
 
 @Repository
 public interface BurgerRepository extends CrudRepository<Burger, Long>{
-    // this method retrieves all the Burgers from the database
+    // this method retrieves all the books from the database
     List<Burger> findAll();
-    // this method finds Burgers with restaurants containing the search string
-    List<Burger> findByRestaurantContaining(String search);
-    // this method counts how many names contain a certain string
-    Long countByNameContaining(String search);
-    // this method deletes a Burger that starts with a specific name
-    Long deleteByNameStartingWith(String search);
 }

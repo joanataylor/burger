@@ -24,7 +24,12 @@ public class BurgerService {
         return burgerRepository.save(b);
     }
 
-    // retrieves a burger
+    // edit a burger
+    public void updateBurger(Burger b) {
+        burgerRepository.save(b);
+    }
+
+    // retrieves a book
     public Burger findBurger(Long id) {
         Optional<Burger> optionalBurger = burgerRepository.findById(id);
         if (optionalBurger.isPresent()) {
@@ -34,9 +39,6 @@ public class BurgerService {
         }
     }
 
-    public Burger updateBurger(Long id, String name, String restaurant, String notes, Integer ratings) {
-        return null;
-    }
 
     public void deleteBurger(Long id) {
     }
